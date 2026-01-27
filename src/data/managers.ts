@@ -8,7 +8,7 @@ import {
   Star,
   RefreshCw,
   Bell,
-  Settings,
+  RefreshCcw,
   LucideIcon
 } from "lucide-react";
 
@@ -119,7 +119,7 @@ export const managers: Manager[] = [
     subtitle: "Powered by Gia",
     description: "",
     accentColor: "#8a3ffc",
-    icon: Settings,
+    icon: RefreshCcw,
     metrics: [
       {
         label: "Repeat Business",

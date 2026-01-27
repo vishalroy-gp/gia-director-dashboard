@@ -7,11 +7,11 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '320px',
-      'md': '672px',
-      'lg': '1056px',
-      'xlg': '1312px',
-      'max': '1584px',
+      'sm': '320px',    // Carbon sm
+      'md': '672px',    // Carbon md
+      'lg': '1056px',   // Carbon lg
+      'xlg': '1312px',  // Carbon xlg
+      'max': '1584px',  // Carbon max
       '2xl': '1400px',
     },
     extend: {
@@ -56,10 +56,15 @@ export default {
             60: '#007d79', 50: '#009d9a', 40: '#08bdba', 30: '#3ddbd9',
             20: '#9ef0f0', 10: '#d9fbfb',
           },
-          orange: {
-            100: '#231000', 90: '#3e1a00', 80: '#5e2900', 70: '#8a3800',
-            60: '#eb6200', 50: '#ff832b', 40: '#ffb784', 30: '#ffd9be',
-            20: '#ffe6d6', 10: '#fff2eb',
+          cyan: {
+            100: '#061727', 90: '#012749', 80: '#003a6d', 70: '#00539a',
+            60: '#0072c3', 50: '#1192e8', 40: '#33b1ff', 30: '#82cfff',
+            20: '#bae6ff', 10: '#e5f6ff',
+          },
+          magenta: {
+            100: '#2a0a18', 90: '#510224', 80: '#740937', 70: '#9f1853',
+            60: '#d02670', 50: '#ee5396', 40: '#ff7eb6', 30: '#ffafd2',
+            20: '#ffd6e8', 10: '#fff0f7',
           },
         },
         border: "hsl(var(--border))",
@@ -86,6 +91,10 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -118,10 +127,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shimmer: 'shimmer 1.5s infinite linear',
       },
     },
   },

@@ -1,16 +1,84 @@
-# React + Vite
+# Gia Director Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Enterprise landing page for the Gia AI Director, showcasing three AI Manager tools. Designed for iPad display at the NADA auto show booth.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI Marketing Manager** - Lead capture and conversion (Instaleads.ai)
+- **AI Business Dev Manager** - AI receptionist and booking (Gia)
+- **AI Customer Service Manager** - Review management (FreshReview)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS with Carbon Design System tokens
+- IBM Plex Sans typography
+- Lucide React icons
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Display Optimization
+
+Optimized for iPad viewports:
+- Standard iPad: 1024x768
+- iPad Pro: 1366x1024
+
+Dark theme by default for booth impact.
+
+## Customization
+
+### Replace Logo
+
+Replace [src/assets/gia-logo.svg](src/assets/gia-logo.svg) with your actual Gia logo file. Update [src/components/Header.tsx](src/components/Header.tsx:7-9) to use the SVG:
+
+```tsx
+<img src="/src/assets/gia-logo.svg" alt="Gia" className="w-10 h-10" />
+```
+
+### Update Metrics
+
+Edit [src/data/managers.ts](src/data/managers.ts) to update the metric values, labels, and trends.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/           # Design system components
+│   ├── Header.tsx    # Top navigation
+│   ├── ManagerCard.tsx
+│   └── MetricItem.tsx
+├── data/
+│   └── managers.ts   # AI manager configurations
+├── styles/
+│   └── globals.css   # Global styles
+└── App.tsx           # Main layout
+```
+
+## Deployment
+
+Deploy to Vercel, Netlify, or any static hosting:
+
+```bash
+npm run build
+# Upload dist/ folder
+```
+
+## License
+
+Copyright 2026 GaragePlug

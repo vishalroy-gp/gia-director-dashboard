@@ -71,7 +71,7 @@ export const managers: Manager[] = [
       }
     ],
     ctaText: "Launch Marketing Manager",
-    ctaUrl: "https://instaleads.ai"
+    ctaUrl: "https://app.getinstantleads.net"
   },
   {
     id: "business-dev",
@@ -111,7 +111,7 @@ export const managers: Manager[] = [
       }
     ],
     ctaText: "Launch Business Dev Manager",
-    ctaUrl: "https://gia.garageplug.ai"
+    ctaUrl: "https://gia-portal-64kft.ondigitalocean.app"
   },
   {
     id: "customer-service",
@@ -151,6 +151,6 @@ export const managers: Manager[] = [
       }
     ],
     ctaText: "Launch Service Manager",
-    ctaUrl: "https://www.freshreview.co"
+    ctaUrl: "https://reviews.garageplug.com"
   }
 ];

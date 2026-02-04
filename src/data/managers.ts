@@ -38,7 +38,7 @@ export const managers: Manager[] = [
     title: "AI Marketing Manager",
     subtitle: "Powered by Gia",
     description: "",
-    accentColor: "#F97316", // Professional Vibrant Orange
+    accentColor: "#3B82F6", // Professional Bright Blue
     icon: Megaphone,
     metrics: [
       {
@@ -118,7 +118,7 @@ export const managers: Manager[] = [
     title: "AI CS Manager",
     subtitle: "Powered by Gia",
     description: "",
-    accentColor: "#8B5CF6", // Professional Bright Purple
+    accentColor: "#3B82F6", // Professional Bright Blue
     icon: RefreshCcw,
     metrics: [
       {

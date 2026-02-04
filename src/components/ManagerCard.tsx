@@ -19,7 +19,7 @@ export function ManagerCard({
     <div className="bg-white h-full min-h-fit flex flex-col relative transition-all duration-200 border border-border rounded-[var(--radius)] group hover:border-primary/50 shadow-sm hover:shadow-md">
       {/* Thicker top accent line (Bold Vercel-style) */}
       <div
-        className="h-[6px] w-full flex-shrink-0"
+        className="h-[3px] w-full flex-shrink-0"
         style={{ backgroundColor: accentColor }}
       />
 
@@ -68,7 +68,7 @@ export function ManagerCard({
         >
           <Button
             variant="outline"
-            className="w-full h-11 justify-between text-[14px] font-medium tracking-[0.16px] px-6 rounded-[var(--radius)] border-border hover:bg-primary hover:text-white group/btn transition-all duration-200"
+            className="w-full h-11 justify-between text-[14px] font-medium tracking-[0.16px] px-6 rounded-[var(--radius)] border-border hover:bg-primary hover:text-primary-foreground hover:border-primary group/btn transition-all duration-200"
           >
             {ctaText}
             <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />

@@ -2,11 +2,12 @@ import giaLogo from "@/assets/logo.png";
 
 export function Header() {
   return (
-    <header className="h-16 w-full bg-white border-b border-carbon-gray-20 px-carbon-05 md:px-carbon-07 flex items-center justify-center shadow-sm relative z-10">
-      <div className="flex items-center gap-carbon-03 md:gap-carbon-04">
-        <img src={giaLogo} alt="Gia" className="h-8 md:h-10" />
-        <h1 className="text-lg md:text-xl font-light tracking-wide text-carbon-gray-100">
-          DIRECTOR DASHBOARD
+    <header className="h-[48px] w-full bg-white border-b border-border px-4 md:px-8 flex items-center justify-between relative z-10">
+      <div className="flex items-center gap-4">
+        <img src={giaLogo} alt="Gia" className="h-[20px]" />
+        <div className="w-[1px] h-4 bg-border"></div>
+        <h1 className="text-[14px] font-semibold tracking-[0.16px] text-foreground uppercase">
+          Director Dashboard
         </h1>
       </div>
     </header>

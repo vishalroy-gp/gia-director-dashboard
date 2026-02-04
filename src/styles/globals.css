@@ -7,88 +7,80 @@
 
 @layer base {
   :root {
-    /* Carbon White Theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    
-    --card: 0 0% 96%;
-    --card-foreground: 0 0% 9%;
-    
+    /* IBM Carbon Gray 10 Theme */
+    --background: 0 0% 95.7%;
+    /* #f4f4f4 */
+    --foreground: 0 0% 8.6%;
+    /* #161616 */
+
+    --card: 0 0% 100%;
+    /* #ffffff */
+    --card-foreground: 0 0% 8.6%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    
-    /* Primary - accent color */
-    --primary: 217 91% 53%;
+    --popover-foreground: 0 0% 8.6%;
+
+    /* Carbon Interactive - Blue 60 */
+    --primary: 214 100% 59%;
+    /* #0f62fe */
     --primary-foreground: 0 0% 100%;
-    
-    --secondary: 0 0% 22%;
-    --secondary-foreground: 0 0% 100%;
-    
-    --muted: 0 0% 96%;
+
+    --secondary: 0 0% 91%;
+    /* #e0e0e0 */
+    --secondary-foreground: 0 0% 8.6%;
+
+    --muted: 0 0% 91%;
     --muted-foreground: 0 0% 32%;
-    
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 9%;
-    
-    --destructive: 0 84% 48%;
+    /* #525252 */
+
+    --accent: 0 0% 91%;
+    --accent-foreground: 0 0% 8.6%;
+
+    --destructive: 0 75% 54%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 0 0% 88%;
+    /* #e0e0e0 */
     --input: 0 0% 88%;
-    --ring: 217 91% 53%;
-    
-    /* Carbon uses 0 radius by default */
-    --radius: 0px;
-    
-    /* Carbon Status Colors */
-    --success: 152 69% 31%;
-    --success-bg: 136 52% 86%;
-    --warning: 46 100% 47%;
-    --warning-bg: 48 89% 91%;
-    --info: 217 91% 53%;
-    --info-bg: 214 100% 93%;
-    --error: 0 84% 48%;
-    --error-bg: 0 100% 97%;
+    --ring: 214 100% 59%;
+
+    /* Carbon is sharp - 2px for boldness */
+    --radius: 2px;
+
+    /* Carbon Status Palette */
+    --success: 145 63% 42%;
+    /* #24a148 */
+    --success-bg: 145 63% 94%;
+    --warning: 37 91% 55%;
+    /* #f1c21b */
+    --warning-bg: 37 91% 94%;
+    --info: 214 100% 59%;
+    --info-bg: 214 100% 94%;
+    --error: 0 75% 54%;
+    /* #da1e28 */
+    --error-bg: 0 75% 94%;
   }
 
   .dark {
-    /* Carbon G100 Theme */
-    --background: 0 0% 9%;
-    --foreground: 0 0% 96%;
-    
+    /* Carbon Gray 100 Theme */
+    --background: 0 0% 8.6%;
+    /* #161616 */
+    --foreground: 0 0% 95.7%;
+    /* #f4f4f4 */
+
     --card: 0 0% 15%;
-    --card-foreground: 0 0% 96%;
-    
+    /* #262626 */
+    --card-foreground: 0 0% 95.7%;
+
     --popover: 0 0% 15%;
-    --popover-foreground: 0 0% 96%;
-    
-    --primary: 217 91% 53%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 0 0% 32%;
-    --secondary-foreground: 0 0% 100%;
-    
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 66%;
-    
-    --accent: 0 0% 22%;
-    --accent-foreground: 0 0% 96%;
-    
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
-    
+    --popover-foreground: 0 0% 95.7%;
+
+    --primary: 214 100% 70%;
+    /* #78a9ff */
+    --primary-foreground: 0 0% 8.6%;
+
     --border: 0 0% 22%;
     --input: 0 0% 22%;
-    --ring: 217 91% 53%;
-    
-    --success: 152 69% 31%;
-    --success-bg: 150 100% 6%;
-    --warning: 46 100% 47%;
-    --warning-bg: 40 100% 5%;
-    --info: 217 91% 53%;
-    --info-bg: 222 100% 23%;
-    --error: 0 84% 48%;
-    --error-bg: 0 73% 17%;
   }
 
   * {
@@ -96,17 +88,35 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   /* Carbon Typography Styles */
-  h1 { @apply text-[2.625rem] leading-[3.125rem] font-light tracking-normal; }
-  h2 { @apply text-[2rem] leading-[2.5rem] font-normal tracking-normal; }
-  h3 { @apply text-[1.75rem] leading-[2.25rem] font-normal tracking-normal; }
-  h4 { @apply text-[1.25rem] leading-[1.75rem] font-normal tracking-normal; }
-  h5 { @apply text-base leading-6 font-semibold tracking-normal; }
-  h6 { @apply text-sm leading-[1.125rem] font-semibold tracking-[0.16px]; }
+  h1 {
+    @apply text-[2.625rem] leading-[3.125rem] font-light tracking-normal;
+  }
+
+  h2 {
+    @apply text-[2rem] leading-[2.5rem] font-normal tracking-normal;
+  }
+
+  h3 {
+    @apply text-[1.75rem] leading-[2.25rem] font-normal tracking-normal;
+  }
+
+  h4 {
+    @apply text-[1.25rem] leading-[1.75rem] font-normal tracking-normal;
+  }
+
+  h5 {
+    @apply text-base leading-6 font-semibold tracking-normal;
+  }
+
+  h6 {
+    @apply text-sm leading-[1.125rem] font-semibold tracking-[0.16px];
+  }
 
   /* Focus visible styles */
   *:focus-visible {
@@ -115,49 +125,145 @@
 }
 
 @layer utilities {
+
   /* Carbon body text styles */
-  .body-01 { @apply text-sm leading-5 font-normal tracking-[0.16px]; }
-  .body-02 { @apply text-base leading-6 font-normal tracking-normal; }
-  .body-compact-01 { @apply text-sm leading-[1.125rem] font-normal tracking-[0.16px]; }
-  .body-compact-02 { @apply text-base leading-[1.375rem] font-normal tracking-normal; }
-  .label-01 { @apply text-xs leading-4 font-normal tracking-[0.32px]; }
-  .label-02 { @apply text-sm leading-[1.125rem] font-normal tracking-[0.16px]; }
-  .helper-text-01 { @apply text-xs leading-4 font-normal tracking-[0.32px]; }
-  .caption-01 { @apply text-xs leading-4 font-normal tracking-[0.32px]; }
+  .body-01 {
+    @apply text-sm leading-5 font-normal tracking-[0.16px];
+  }
+
+  .body-02 {
+    @apply text-base leading-6 font-normal tracking-normal;
+  }
+
+  .body-compact-01 {
+    @apply text-sm leading-[1.125rem] font-normal tracking-[0.16px];
+  }
+
+  .body-compact-02 {
+    @apply text-base leading-[1.375rem] font-normal tracking-normal;
+  }
+
+  .label-01 {
+    @apply text-xs leading-4 font-normal tracking-[0.32px];
+  }
+
+  .label-02 {
+    @apply text-sm leading-[1.125rem] font-normal tracking-[0.16px];
+  }
+
+  .helper-text-01 {
+    @apply text-xs leading-4 font-normal tracking-[0.32px];
+  }
+
+  .caption-01 {
+    @apply text-xs leading-4 font-normal tracking-[0.32px];
+  }
 
   /* Carbon productive motion */
-  .motion-productive { transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9); }
-  .motion-expressive { transition-timing-function: cubic-bezier(0.4, 0.14, 0.3, 1); }
-  
-  .duration-fast-01 { transition-duration: 70ms; }
-  .duration-fast-02 { transition-duration: 110ms; }
-  .duration-moderate-01 { transition-duration: 150ms; }
-  .duration-moderate-02 { transition-duration: 240ms; }
+  .motion-productive {
+    transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
+  }
+
+  .motion-expressive {
+    transition-timing-function: cubic-bezier(0.4, 0.14, 0.3, 1);
+  }
+
+  .duration-fast-01 {
+    transition-duration: 70ms;
+  }
+
+  .duration-fast-02 {
+    transition-duration: 110ms;
+  }
+
+  .duration-moderate-01 {
+    transition-duration: 150ms;
+  }
+
+  .duration-moderate-02 {
+    transition-duration: 240ms;
+  }
 
   /* Carbon 2x Grid System */
   .carbon-grid {
     @apply grid gap-8;
     grid-template-columns: repeat(4, 1fr);
   }
-  @media (min-width: 672px) { .carbon-grid { grid-template-columns: repeat(8, 1fr); } }
-  @media (min-width: 1056px) { .carbon-grid { grid-template-columns: repeat(16, 1fr); } }
 
-  .carbon-grid-container { @apply w-full mx-auto px-0; }
-  @media (min-width: 672px) { .carbon-grid-container { @apply px-4; } }
-  @media (min-width: 1056px) { .carbon-grid-container { @apply px-4; } }
-  @media (min-width: 1312px) { .carbon-grid-container { @apply px-4; } }
-  @media (min-width: 1584px) { .carbon-grid-container { @apply px-6; max-width: 1584px; } }
+  @media (min-width: 672px) {
+    .carbon-grid {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @media (min-width: 1056px) {
+    .carbon-grid {
+      grid-template-columns: repeat(16, 1fr);
+    }
+  }
+
+  .carbon-grid-container {
+    @apply w-full mx-auto px-0;
+  }
+
+  @media (min-width: 672px) {
+    .carbon-grid-container {
+      @apply px-4;
+    }
+  }
+
+  @media (min-width: 1056px) {
+    .carbon-grid-container {
+      @apply px-4;
+    }
+  }
+
+  @media (min-width: 1312px) {
+    .carbon-grid-container {
+      @apply px-4;
+    }
+  }
+
+  @media (min-width: 1584px) {
+    .carbon-grid-container {
+      @apply px-6;
+      max-width: 1584px;
+    }
+  }
 
   /* Column span utilities for 16-column grid */
-  .col-span-full-16 { grid-column: span 16 / span 16; }
-  .col-span-12-16 { grid-column: span 12 / span 12; }
-  .col-span-8-16 { grid-column: span 8 / span 8; }
-  .col-span-4-16 { grid-column: span 4 / span 4; }
+  .col-span-full-16 {
+    grid-column: span 16 / span 16;
+  }
+
+  .col-span-12-16 {
+    grid-column: span 12 / span 12;
+  }
+
+  .col-span-8-16 {
+    grid-column: span 8 / span 8;
+  }
+
+  .col-span-4-16 {
+    grid-column: span 4 / span 4;
+  }
 
   /* Caret blink animation for OTP input */
   @keyframes caret-blink {
-    0%, 70%, 100% { opacity: 1; }
-    20%, 50% { opacity: 0; }
+
+    0%,
+    70%,
+    100% {
+      opacity: 1;
+    }
+
+    20%,
+    50% {
+      opacity: 0;
+    }
   }
-  .animate-caret-blink { animation: caret-blink 1.25s ease-out infinite; }
+
+  .animate-caret-blink {
+    animation: caret-blink 1.25s ease-out infinite;
+  }
 }

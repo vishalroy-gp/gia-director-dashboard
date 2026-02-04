@@ -4,31 +4,31 @@ import { managers } from "./data/managers";
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-white flex flex-col overflow-hidden relative">
-      {/* Faded Grid Background */}
+    <div className="h-screen w-screen bg-[#f4f4f4] flex flex-col overflow-hidden relative">
+      {/* Carbon subtle grid overlay */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none opacity-[0.02]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px)
+            linear-gradient(to right, #000 1px, transparent 1px),
+            linear-gradient(to bottom, #000 1px, transparent 1px)
           `,
-          backgroundSize: '48px 48px'
+          backgroundSize: '16px 16px'
         }}
       />
-      {/* Radial fade overlay */}
+      {/* Focus overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 1) 100%)'
+          background: 'radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.2) 100%)'
         }}
       />
       {/* Minimal Header */}
       <Header />
 
       {/* Main Content */}
-      <main className="flex-1 flex items-start lg:items-center justify-center px-carbon-05 md:px-carbon-06 lg:px-carbon-07 py-carbon-05 md:py-carbon-06 relative z-10 overflow-y-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-carbon-05 md:gap-carbon-06 w-full max-w-[1280px] lg:h-full lg:max-h-[600px]">
+      <main className="flex-1 flex items-start lg:items-center justify-center px-6 md:px-10 lg:px-12 py-6 md:py-8 relative z-10 overflow-y-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-[1584px] lg:h-[75vh] lg:min-h-[600px] lg:max-h-[800px]">
           {managers.map((manager) => (
             <ManagerCard key={manager.id} {...manager} />
           ))}
